@@ -1,0 +1,138 @@
+/***********************************
+            GRID
+***********************************/
+// .container-lg{
+//     padding: 0 2rem;
+// }
+// .container-sm{
+//     padding: 0 8rem; 
+//     @include respond(tab-portrait){
+//         padding: 0;
+//     }
+//     @include respond(phone){
+//         padding: 0;
+//     }
+// }
+// .container-xs{
+//     padding: 0 20rem; 
+//     @include respond(tab-landscape){
+//         padding: 0;
+//     }
+//     @include respond(tab-portrait){
+//         padding: 0;
+//     }
+//     @include respond(phone){
+//         padding: 0;
+//     }
+// }
+// .hide-on-lg-desktop{
+//     @include respond(big-desktop){
+//         display: none;
+//     }
+// }
+// .hide-on-desktop{
+//     @include respond(desktop){
+//         display: none !important;
+//     }
+// }
+// .hide-on-landscape{
+//     @include respond(tab-landscape){
+//         display: none !important;
+//     } 
+// }
+// .show-on-landscape{
+//     @include respond(tab-landscape){
+//         display: block !important;
+//     } 
+// }
+// .hide-on-portrait{
+//     @include respond(tab-portrait){
+//         display: none !important;
+//     } 
+// }
+// .show-on-portrait{
+//     @include respond(tab-portrait){
+//         display: block !important;
+//     } 
+// }
+// .hide-on-mobile{
+//     @include respond(phone){
+//         display: none !important;
+//     }
+//     @include respond(tab-portrait){
+//         display: none !important;
+//     }
+// }
+// .show-on-mobile{
+//     @include respond(phone){
+//         display: block !important;
+//     } 
+//    @include respond(tab-portrait){
+//         display: block !important;
+//     } 
+// }
+
+.row{
+    max-width: $max-width;
+    margin: 0 auto;
+    @include clearfix;
+    &:not(:last-child){
+        margin-bottom: $row-gutter;
+    }
+    & [class^="col-"]{
+        float: left;
+         &:not(:last-child){
+            margin-right: $column-gutter;
+        }
+    }
+    .col-1{
+        width: calc( (#{$max-width} - (#{$column-gutter} * 11)) / 12 );
+    }
+    .col-2{
+        width: calc( ( #{$max-width} - (#{$column-gutter} * 5) ) / 6 );
+    }
+    .col-3{
+        width: calc( ( #{$max-width} - (#{$column-gutter} * 3) ) / 4 );
+    }
+    .col-4{
+        width: calc( ( #{$max-width} - (#{$column-gutter} * 2) ) / 3 );
+    }
+    .col-5{
+        width: calc( ((#{$max-width} - (#{$column-gutter} * 11)) / 12) * 5 + #{$column-gutter} * 4);
+    }
+    .col-6{
+        width: calc( ( #{$max-width} - #{$column-gutter} ) / 2 );
+    }
+    .col-7{
+        width: calc( ((#{$max-width} - (#{$column-gutter} * 11)) / 12) * 7 + #{$column-gutter} * 6);
+    }
+    .col-8{
+        width: calc( ((#{$max-width} - (#{$column-gutter} * 2)) / 3) * 2 + #{$column-gutter});
+    }
+    .col-9{
+        width: calc( ((#{$max-width} - (#{$column-gutter} * 3) ) / 4) * 3 + #{$column-gutter}*2);
+    }
+    .col-10{
+        width: calc( ((#{$max-width} - (#{$column-gutter} * 5)) / 6) *5 + #{$column-gutter}*4 )
+    }
+    .col-11{
+        width: calc( ((#{$max-width} - (#{$column-gutter} * 11)) / 12) * 11 + #{$column-gutter}*10);
+    }
+    .col-12{
+        width: calc( #{$max-width} );
+    }
+    .col-m-12{
+        // @include respond(tab-portrait){
+        //     width: calc( #{$max-width} ) !important;
+        // } 
+        // @include respond(phone-portrait-1){
+        //     width: calc( #{$max-width} ) !important;
+        // } 
+        // @include respond(phone-portrait){
+        //     width: calc( #{$max-width} ) !important;
+        // } 
+        // @include respond(phone){
+        //     width: calc( #{$max-width} ) !important;
+        // } 
+    }
+}

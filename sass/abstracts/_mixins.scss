@@ -1,0 +1,84 @@
+@mixin clearfix {
+    &::after{
+        content: "";
+        display: table;
+        clear: both;
+    }
+}
+@mixin center{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+
+
+//MEDIA QUERIES
+
+/**
+    MOBILE FIRST APPROACH
+    Extra small devices (portrait phones, less than 576px)
+    No media query for `xs` since this is the default
+    No media query necessary for xs breakpoint as it's effectively `@media (min-width: 0) { ... }`
+**/
+@mixin respond-up($breakpoint) {
+    @if $breakpoint == sm {
+        @media only screen and (min-width:36em) { @content }; // Small devices (landscape phones, 576px and up) 576px  / 16px = 36em
+    }
+    @else if $breakpoint == md {
+        @media only screen and (min-width:48em) { @content }; // Medium devices (tablets, 768px and up) 768px / 16px = 48em
+    }
+    @else if $breakpoint == lg {
+        @media only screen and (min-width:62em) { @content }; // Large devices (desktops, 992px and up) 992px / 16px = 62em
+    }
+    @else if $breakpoint == xl {
+        @media only screen and (min-width:75em) { @content }; // Extra large devices (large desktops, 1200px and up) 1200px / 16px = 75em
+    }    
+}
+
+
+
+/**
+    DESKTOP FIRST APPROACH
+    No media query necessary for xl breakpoint as it has no upper bound on its width
+**/
+@mixin respond-down($breakpoint) {
+    @if $breakpoint == xs {
+        @media only screen and (max-width:35.999em) { @content }; // Extra Small devices (portrait phones, less than 576px) 575.98px  / 16px = 35.999em
+    }
+    @else if $breakpoint == sm {
+        @media only screen and (max-width:47.999em) { @content }; // Small devices (landscape phones, less than 768px) 767.98px / 16px = 47.999em
+    }
+    @else if $breakpoint == md {
+        @media only screen and (max-width:61.999em) { @content }; // Medium devices (tablets, less than 992px) 991.98px / 16px = 61.999em
+    }
+    @else if $breakpoint == lg {
+        @media only screen and (max-width:74.999em) { @content }; // Large devices (desktops, less than 1200px) 1199.98px / 16px = 74.999em
+    }
+}
+
+
+
+
+/**
+    Target specific breakpoint
+    No media query necessary for xl breakpoint as it has no upper bound on its width
+**/
+@mixin respond-only($breakpoint) {
+    @if $breakpoint == xs {
+        @media only screen and (max-width:35.999em) { @content }; // Extra Small devices (portrait phones, less than 576px)
+    }
+    @else if $breakpoint == sm {
+        @media only screen and (min-width: 36em) and (max-width: 47.999) { @content }; // Small devices (landscape phones, 576px and up)
+    }
+    @else if $breakpoint == md {
+        @media only screen and (min-width: 48em) and (max-width: 61.999em) { @content }; // Medium devices (tablets, 768px and up) 
+    }
+    @else if $breakpoint == lg {
+        @media only screen and (min-width: 62em) and (max-width: 74.999em) { @content }; // Large devices (desktops, 992px and up)
+    }
+    @else if $breakpoint == xl {
+        @media only screen and (min-width: 1200px) { @content }; // Extra Large devices (large desktops, 1200px and up)
+    }
+}

@@ -1,0 +1,83 @@
+@keyframes moveInLeft{
+    0%{
+        opacity: 0;
+        transform: translateX(-20rem);
+    }
+    80%{
+        opacity: .8;
+        transform: translateX(-10rem);
+    }
+    100%{
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+.animate--moveInLeft{
+    animation: moveInLeft .9s ease-in-out 1s;
+    animation-fill-mode: backwards;
+}
+@keyframes moveInRight{
+    0%{
+        opacity: 0;
+        transform: translateX(10rem);
+    }
+    80%{
+        opacity: .5;
+        transform: translateX(-2rem);
+    }
+    100%{
+        opacity: 1;
+        transform: translate(0);
+    }
+}
+.animate--moveInRight{
+    animation: moveInRight .9s ease-in-out 1.8s;
+    animation-fill-mode: backwards;
+}
+@keyframes moveInBottom{
+    0%{
+        opacity: 0;
+        transform: translateY(4rem);
+    }
+    100%{
+        opacity: 1;
+        transform: translate(0);
+    }
+}
+.animate--moveInBottom{
+    animation: moveInBottom .9s ease-in-out 1s;
+    animation-fill-mode: backwards;
+}
+.animate--moveInBottom--1{
+    animation: moveInBottom .9s ease-in-out 1.8s;
+    animation-fill-mode: backwards;
+}
+@keyframes dropPopover{
+    0%{
+        transform: translateY(-15rem);
+    } 
+    100%{
+        opacity: 1;
+        transform: translateY(0);
+    } 
+}
+.drop-popover{
+    animation: dropPopover .4s ease-in-out .3s forwards;
+}
+
+.rotate-dice{
+    animation-name: rotateDice;
+    animation-duration: .8s;
+    animation-timing-function: cubic-bezier(0.33, 0.3, 0.53, 0.55);
+    animation-iteration-count: infinite;
+    animation-fill-mode: backwards;
+}
+
+@keyframes rotateDice{
+    0%{
+        transform: rotate(-885deg);
+    }
+    100%{
+        transform: rotate(0);
+    }
+}

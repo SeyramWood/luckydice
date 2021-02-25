@@ -1,0 +1,27 @@
+/***********************************
+            COLORS
+***********************************/
+$danger: #fd3b00;
+$success: #04644c;
+$white: #FFF;
+$gray-light: #F7F7F7;
+$gray: #555;
+$paragraph: rgb(69, 91, 102);
+$color-black:black;
+$lavender: rgb(14, 14, 235);
+$bg-color:radial-gradient(  #053c5c, #044d77);
+
+
+/***********************************
+            GRID
+***********************************/
+$max-width: 100%;
+$row-gutter: 1rem;
+$column-gutter: 1rem;
+$zindex-dropdown:          1000 !default;
+$zindex-sticky:            1020 !default;
+$zindex-fixed:             1030 !default;
+$zindex-modal-backdrop:    1040 !default;
+$zindex-modal:             1050 !default;
+$zindex-popover:           1060 !default;
+$zindex-tooltip:           1070 !default;

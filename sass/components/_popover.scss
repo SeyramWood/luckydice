@@ -1,0 +1,50 @@
+
+.popover{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: $zindex-modal;
+    background-color: rgba($color-black, .25);
+    display: none;
+    overflow-y: scroll;
+    &__content{
+        width: 90%;
+        min-height: 20rem;
+        background-color: $white;
+        margin: 2rem auto;
+        opacity: 0;
+        border-radius: .2rem;
+        padding: 1rem;
+        @include respond-up(lg){
+            width: 50%;
+        }
+        &__body{
+            padding: 2rem 0;
+            p.paragraph{
+                hyphens: auto;
+            }
+            .buttons{
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+            }
+        }
+    }
+}
+
+.error-message{
+    position: absolute;
+    top: 1rem;
+    left: 1rem;
+    padding: 1rem 2rem;
+    background: $white;
+    color: rgb(252, 105, 105);
+    z-index: $zindex-tooltip;
+    font-size: 1.4rem;
+    font-weight: bold;
+    letter-spacing: .1rem;
+    border-radius: .3rem;
+}
+

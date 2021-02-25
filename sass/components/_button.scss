@@ -1,0 +1,68 @@
+.btn{
+    text-transform: uppercase;
+    font-size: 1.2rem;
+    letter-spacing: .2rem;
+    outline: none;
+    border:none;
+    vertical-align: middle;
+    text-align: center;
+    cursor: pointer;
+    &:not(:last-child){
+        margin-right: 1rem;
+    } 
+    
+    transition: all .2s ease-in-out;
+    display: inline-block;
+    font-weight: bold;
+    color: $white;
+}
+.btn-rounded{
+    background: $bg-color;
+    box-shadow:  4rem 4rem 10rem #219be2,
+                -4rem -4rem 10rem #55b9f3;
+    border-radius: 50%;
+    padding: 1.3rem 1.5rem;
+}
+.btn-rounded2{
+    background:  #023755;
+    box-shadow:  4rem 4rem 10rem #219be2,
+                -4rem -4rem 10rem #55b9f3;
+    border-radius: 50%;
+    padding: .1rem .8rem;
+    
+}
+.btn-rounded:active{
+    background-color: $danger;          
+}
+.btn-flat{
+    background: $bg-color;
+    box-shadow:  4rem 4rem 10rem #219be2,
+                -4rem -4rem 10rem #55b9f3;
+    border-radius: .4rem;
+    padding: 1rem 1.5rem;
+}
+.btn-success{
+    background-color: rgba($success, 0.9);
+    border-radius: .4rem;
+    padding: .25rem .5rem;
+    letter-spacing: .01rem;
+    font-weight: 300;
+}
+.btn-danger{
+    background-color: rgba($danger, 0.9);
+    border-radius: .4rem;
+    padding: .25rem .5rem;
+    letter-spacing: .01rem;
+    font-weight: 300;
+}
+.btn:active{
+    box-shadow:  2rem 2rem 5rem #219be2,
+                -2rem -2rem 5rem #55b9f3;
+                transform: translateY(.5rem);
+                
+}
+
+
+
+
+

@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!-- <link rel="stylesheet" href="css/style.css"> -->
+    <link rel="stylesheet" href="css/luckydice.min.css">
+    <title>Lucky Dice</title>
+</head>
+<body>
+        <div class="game__container">
+            <div id="game__container__head" class="game__container__head">
+                <h1 class="header-secondary">Lucky Dice</h1>
+            </div>
+            <div class="game__container__body">
+                <div class="game__container__body--left">
+                    <div id="game__container__levels" class="game__container__levels">
+                        
+                    </div>
+                </div>
+                <div class="game__container__body--right">
+                    <div id="options" class="options">
+                        <button  class="btn btn-rounded option" >1</button>
+                        <button  class="btn btn-rounded option" >2</button>
+                        <button  class="btn btn-rounded option" >3</button>
+                        <button  class="btn btn-rounded option" >4</button>
+                        <button  class="btn btn-rounded option" >5</button>
+                        <button  class="btn btn-rounded option" >6</button>
+                    </div>
+                    <div class="play__game">
+                        <div id="dice" class=""><img src="./images/dice.png" alt="" srcset=""></div>
+                        <div class="play__game__buttons">
+                            <button  id="throwDice" class="btn btn-flat">Throw Dice</button>
+                            <button  id="resetGame" class="btn btn-flat">Reset</button>
+                        </div>
+                    </div>
+                    
+                </div>
+            
+            </div>
+        </div>
+
+
+        <div id="messagePopover" class="popover">
+            <div class="popover__content drop-popover">
+               <div class="popover__content__body">
+                   <h4 class="header-secondary text-center" >Congratulations!!!</h4>
+                   <p class="paragraph">
+                       You should be proud of yourself, you've just completed <b id='changeLevel'>Level 1</b> of <b>Lucky Dice</b>.
+                   </p>
+                   <p class="paragraph">
+                       <b id='messageQuestion'>Continue to next level ?</b> 
+                   </p>
+                   <div class="buttons">
+                        <button class="btn btn-flat" id="cancelGame">No</button>
+                        <button class="btn btn-flat" id="continueGame">Yes</button>
+                   </div>
+               </div>
+            </div>
+        </div>
+    
+        <div class="side-navigation">
+            <input type="checkbox" id="checkbox" class="checkbox">
+            <label class="btn-float" for="checkbox"><span class="menubar"></span></label>
+            <div class="overlay"></div>
+            <div class="navbar">
+                <div class="navbar__logo__wrapper">
+                    <div class="navbar__logo"><img src="images/logo.png" alt="logo"></div>
+                </div>
+                <ul class="navbar__navs">
+                    <li class="navbar__navs__list"><a href="javascript::" id="dropdown">Help</a></li>
+                    <li class="navbar__navs__list"><a href="">Developer</a></li>
+                    <li class="navbar__navs__list"><a href="">About Seydel</a></li>
+                </ul>
+                <div class="navbar__copyright">
+                    <em>Seydel Corporation &copy; 2020</em>
+                </div>
+            </div> 
+        </div>
+    <script src="js/Pizzicato.min.js"></script>
+    <script src="js/dist/luckydice.min.js"></script>
+</body>
+</html>
